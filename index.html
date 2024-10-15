@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>belajar HTML</title>
+    <style>
+    	  body {
+	margin: 0;
+	font-family: Arial, sans-serif;
+	background: #ffffff;
+}
+.navbar{
+	background: #212121;
+	margin: 0;
+	padding: 20px 30px;
+}
+ 
+.logo{
+	font-size: 14pt;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+ 
+.navigasi {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+ 
+.tombol{
+	display: none;
+	color: white;
+	font-size: 14pt;			
+}
+ 
+.tombol:hover{
+	cursor: pointer;
+}
+ 
+ 
+.menu{
+	margin: 0;
+	display: flex;
+	list-style: none;
+	padding: 0;			
+}
+ 
+.menu li{
+	padding-left: 0;
+	margin-right: 10px;
+}
+ 
+.menu li a{
+	padding:10px;
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+}
+ 
+ 
+@media screen and (max-width: 768px) {
+	.menu {
+		display: none;
+	}
+ 
+	.menu.aktif{
+		display:inline-block;
+		position: absolute;
+		top: 64px;
+		background: #212121;
+		padding: 10px 20px;
+		right: 0;
+		left: 0;
+	}
+ 
+	.menu.aktif li a{
+		padding: 10px;
+		display: inline-block !important;
+	}
+ 
+	.tombol {
+		display: block;
+	}
+	
+        a {
+          color: #22d0f9;
+        }
+
+        .container {
+            background-color: black;
+            padding: 0px;
+            border: 1px solid black;
+            margin: auto;
+            position: relative;
+            width: 103%;
+            height: 210px;
+            left: -8px;
+            top: -8px;
+            text-align: center;
+        }
+
+        img {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .kotak {
+          background-color: #483e3e;
+          padding: 0px;
+          border: 1px solid black;
+          margin: auto;
+          position: relative;
+          width: 101%;
+          height: 200px;
+          left: -8px;
+          bottom: -8px;
+        }
+        
+        .topnavbar {
+          background-color: #011124;
+          padding: 0px;
+          border: 1px solid black;
+          margin: auto;
+          position: relative;
+          width: 103%;
+          
+        }
+        
+    </style>
+</head>
+<body>
+ <nav class="navbar">
+	<div class="navigasi">
+ 
+		<a href="https://www.malasngoding.com" class="logo">Surya</a>
+		
+		<ul class="menu">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="#">Tentang</a></li>
+			<li><a href="#">Produk</a></li>
+			<li><a href="#">Layanan</a></li>
+			<li><a href="#">Kontak Kami</a></li>
+		</ul>
+ 
+ 
+		<div class="tombol">
+			&#9776;
+		</div>
+ 
+	</div>
+</nav>
+ 
+	<script type="text/javascript">
+		// deklarasi tombol dan menu
+		const tombol = document.querySelector('.tombol');
+		const menu = document.querySelector('.menu');
+ 
+		// membuat event click
+		// pada saat tombol di click, tambahkan class aktif pada class menu
+		// saat diklik lagi, maka class aktif dihilangkan dari class menu (toggle)
+		tombol.addEventListener('click', () => {
+			menu.classList.toggle('aktif');
+		});
+	</script>
+ 
+
+    <h1>Belajar HTML</h1>
+    <h2>Pengertian HTML</h2>
+    <ul>
+        <p>HTML adalah singkatan dari Hypertext Markup Language, HTML merupakan salah satu bahasa pengkodean atau pemograman yang digunakan untuk membuat halaman website yang ditampilkan pada web browser. Sebagian besar halaman yang kamu temukan pada internet kebanyakan menggunakan Bahasa HTML.</p>
+    </ul>
+    <h2>Sejarah singkat bahasa pemrograman HTML</h2>
+    <ul>
+        <p>HTML diciptakan oleh Sir Tim Berners-lee pada akhir tahun 1991 namun tidak dirilis secara resmi. Sir Tim Berners-lee merilis HTML versi pertama pada tahun 1993 dengan tujuan untuk berbagi informasi yang dapat dibaca dan diakses melalui web browser.
+            Hingga saat ini versi HTML sudah mencapai versi 5 yang dirilis pada tahun 2012, Versi HTML 5 ini merupakan terusan dari perpanjangan versi HTML 4.01 yang sebelumnya digunakan oleh kebanyakan orang.</p>
+    </ul>
+    <h2>Kelebihan dan Kekurangan bahasa pemrograman HTML</h2>
+    <h3>Kelebihan Bahasa Pemograman HTML</h3>
+    <ol type="1">
+        <li>Memiliki banyak sumber dan komunitas yang sangat besar.</li>
+        <li>Bersifat Open Source sehingga gratis untuk digunakan</li>
+        <li>Memiliki Bahasa Markup yang konsisten dan rapi</li>
+        <li>Mudah diintegrasikan dengan Bahasa backend seperti PHP , Node.js dan javascript</li>
+        <li>Bisa dijalankan oleh semua Browser.</li>
+        <li>Dapat dipelajari dengan mudah oleh web developer pemula.</li>
+    </ol>
+    <h3>Kekurangan Bahasa Pemograman HTML</h3>
+    <ol>
+        <li>Bahasa pemograman HTML hanya dapat diimplementasikan untuk halaman web static . jika ingin menambah fitur dinamis, pengguna dapat menggunakan bahasa pemograman back-end seperti javascript atau Bahasa pemograman back-end lainnya.</li>
+        <li>Terdapat fitur baru yang tidak dapat dijalankan dengan cepat oleh web browser.</li>
+        <li>Bahasa pemograman HTML tidak mendukung logic sehingga semua halaman website harus dibuat secara terpisah.
+        </li>
+    </ol>
+    <h2>Cara kerja bahasa pemrograman HTML</h2>
+    <ul>
+        <p>Pertama-tama kamu harus membuat dokumen HTML pada aplikasi editor HTML seperti Visual Studio, Sublime Text dan lain-lainnya , lalu menyimannya dengan format html atau htm. File HTML dibuat bisa lebih dari satu tergantung kebutuhan file yang akan diperlukan. File-file yang telah dibuat ini berisi Halaman Utama , kontak , isi Website dan lain-lain.<br>File HTML dapat dibuka oleh web browser seperti Google Chrome , Mozilla Firefox, Internet Explore dan masih banyak lagi. Kemudian, agar dapat diakses oleh banyak orang kamu harus menyewa layanan Hosting website dan mengupload file HTML pada halaman hosting yang dapat kamu akses pada cpanel.
+            File HTML yang sudah terupload, maka browser akan merender file HTML menjadi halaman website sehingga kamu dan pengunjung web lain dapat mengaksesnya melalui internet.</p>
+    </ul>
+    
+    <div class="kotak">
+      <center>
+          <h2 style="color: #ffffff;">Belajar HTML</h2>
+        <p style="color: #ffffff;">Untuk belajar HTML lebih lanjut klik link di bawah:</p>
+      </center>
+            <ul>
+        <li style="color: #ffffff;"><a href="https://www.w3schools.com/html/">Website</a></li>
+        <li style="color: #ffffff;"><a  href="https://youtube.com/playlist?list=PLFIM0718LjIX-K5eeHRImnZhPUMhsw9A7&si=7nuUhutAwYGbNoRt">Video</a></li>
+        <li style="color: #ffffff;"><a
+        href="https://drive.google.com/file/d/144P2VUg_oSGPB1S324nRz8x8yIgneaVG/view?usp=drivesdk">Buku</a></li>
+        <center>
+           <p style="color: #ffffff;">Web Development, Programing Hub, Surya-git-hup<br>Hak cipta ©2024  Dicoding</p> 
+        </center>
+      </ul>
+    </div>
+</body>
+</html>
